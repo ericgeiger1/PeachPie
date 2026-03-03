@@ -1,13 +1,12 @@
 #include <iostream>
+#include <random>
 using namespace std;
 
 int main () {
 
         
-    int     minDelivery,
-            maxDelivery,
-            delivery; 
-            
+    const int   minDelivery = 5,
+                maxDelivery = 100;            
             
     int peachesAvail,
             numPies,
@@ -27,10 +26,15 @@ int main () {
                   saltPerPie = 1,
                   lemonJuicePerPie = 2;
 
-        const tbspsPerCup = 16;
-        const tspsPerTbsp = 3;
+        const int tbspsPerCup = 16;
+        const int tspsPerTbsp = 3;
 
-  
+        random_device myEngine;
+        uniform_int_distribution<int> randomInt(minDelivery, maxDelivery);
+        
+        int randomPeaches = randomInt(myEngine);
+
+        cout << randomPeaches << endl;
 
     return 0;
 }
