@@ -49,16 +49,15 @@ int main () {
             totalLemonJuice;
 
         const int peachesPerPie = 5,
-                  sugarPerPie = 24,
-                  flourPerPie = 16,
-                  butterPerPie = 8,
-                  cinnamonPerPie = 1,
-                  vanillaPerPie = 1,
-                  saltPerPie = 1,
-                  lemonJuicePerPie = 2;
+                  sugarPerPie = 12, //tbsps
+                  flourPerPie = 8, //tbsps
+                  butterPerPie = 4, //tbsps
+                  cinnamonPerPie = 1, //tsps
+                  vanillaPerPie = 1, //tsps
+                  saltPerPie = 1, //tsps
+                  lemonJuicePerPie = 2; //tsps
 
-        const int tbspsPerCup = 16;
-        const int tspsPerTbsp = 3;
+    
 
         random_device myEngine;
         uniform_int_distribution<int> randomInt(minDelivery, maxDelivery);
@@ -72,6 +71,8 @@ int main () {
         leftoverPeaches = randomPeaches % peachesPerPie;
 
         cout << "Number of pies that can be made: " << numPies << endl;
+        
+        // Remainder when divided by 5
         cout << "Leftover peaches: " << leftoverPeaches << endl << endl;
 
         //Calculate the total amount of each ingredient needed to make the number of pies
@@ -91,9 +92,7 @@ int main () {
         cout << "Total Salt: " << totalSalt << " tsps" << endl;
         cout << "Total Lemon Juice: " << totalLemonJuice << " tbsps" << endl;
 
-        // Remainder when divided by 5
-        int remainder = randomPeaches % 5;
-        cout << "Remainder when divided by 5: " << remainder << endl;
+  
 
     return 0;
 }
