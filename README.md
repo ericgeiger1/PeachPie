@@ -1,10 +1,10 @@
-#🍑  Peach Pie Case Study Project 🍑
+# 🍑  Peach Pie Case Study Project 🍑
 
 ## Pseudocode
 
-START
+### START
 
-SET constants:
+#### SET constants:
   minDelivery = 5
   maxDelivery = 100
   peachesPerPie = 5
@@ -21,13 +21,13 @@ SET constants:
   tbspPerCup = 16
   tspPerTbsp = 3
 
-GENERATING randomPeaches between minDelivery and maxDelivery
+### GENERATING randomPeaches between minDelivery and maxDelivery
 
-CALCULATE:
+#### CALCULATE:
   numPies = randomPeaches / peachesPerPie
   leftoverPeaches = randomPeaches % peachesPerPie
 
-CALCULATE ingredient totals:
+#### CALCULATE ingredient totals:
   totalSugar = numPies * sugarPerPie        // tbsp
   totalFlour = numPies * flourPerPie        // tbsp
   totalButter = numPies * butterPerPie      // tbsp
@@ -37,7 +37,7 @@ CALCULATE ingredient totals:
   totalSalt = numPies * saltPerPie          // tsp
   totalLemonJuice = numPies * lemonJuicePerPie // tsp
 
-CONVERT tbsp totals to cups + tbsp:
+#### CONVERT tbsp totals to cups + tbsp:
   sugarCups = totalSugar / tbspPerCup
   sugarTbspLeft = totalSugar % tbspPerCup
   flourCups = totalFlour / tbspPerCup
@@ -45,7 +45,7 @@ CONVERT tbsp totals to cups + tbsp:
   butterCups = totalButter / tbspPerCup
   butterTbspLeft = totalButter % tbspPerCup
 
-CONVERT tsp totals to tbsp + tsp:
+#### CONVERT tsp totals to tbsp + tsp:
   cinnamonTbsp = totalCinnamon / tspPerTbsp
   cinnamonTspLeft = totalCinnamon % tspPerTbsp
   vanillaTbsp = totalVanilla / tspPerTbsp
@@ -55,7 +55,7 @@ CONVERT tsp totals to tbsp + tsp:
   lemonTbsp = totalLemonJuice / tspPerTbsp
   lemonTspLeft = totalLemonJuice % tspPerTbsp
 
-PRINT:
+#### PRINT:
   Peaches delivered
   Number of pies
   Leftover peaches
@@ -67,4 +67,4 @@ PRINT:
   Salt in tbsp + tsp
   Lemon juice in tbsp + tsp
 
-END
+## END
