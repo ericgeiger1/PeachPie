@@ -1,3 +1,9 @@
+// Name: Eric Geiger
+// Course: COSC - 1436 - 21004
+// Date: 3/9/2026
+// Purpose: Calculate ingredients needed for peach pies based on random delivery of peaches.
+
+
 #include <iostream>
 #include <random>
 using namespace std;
@@ -22,11 +28,10 @@ int main() {
 
 // 2. Generate random number of peaches delivered
 
-    random_device rd;
-    uniform_int_distribution<int> dist(minDelivery, maxDelivery);
+   random_device rd;
+   uniform_int_distribution<int> dist(minDelivery, maxDelivery);
     int randomPeaches = dist(rd);
-
-// Calculating
+//    int randomPeaches = 200; // for testing purposes.
 
     // a) Pie counts
     int numPies = randomPeaches / peachesPerPie;
@@ -62,7 +67,9 @@ int main() {
 // 4. Printing
     cout << "Peaches Delivered: " << randomPeaches << endl;
     cout << "Number of pies: " << numPies << endl;
-    cout << "Leftover peaches: " << leftoverPeaches << endl << endl;
+    // Remainder when dividing by 5
+    cout << "Leftover peaches: " << leftoverPeaches << endl;
+    cout << "Remainder when divided by 5: " << randomPeaches % 5 << endl << endl;
 
     cout << "Sugar Needed: " << sugarCups << " cups " << sugarTbspLeft << " tbsp" << endl;
     cout << "Flour Needed: " << flourCups << " cups " << flourTbspLeft << " tbsp" << endl;

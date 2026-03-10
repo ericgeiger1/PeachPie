@@ -1,0 +1,25 @@
+Pseudocode
+START
+Set delivery range from 5 to 100 peaches
+Set peaches needed per pie to 5
+Set ingredient amounts needed for one pie
+Set conversion values for tablespoons and teaspoons
+
+Generate a random number of peaches delivered
+
+Calculate number of pies possible using division
+Calculate leftover peaches using modulus
+Calculate remainder when dividing by 5
+
+Scale all ingredient totals based on number of pies
+
+Convert sugar, flour, and butter totals into cups and tablespoons
+Convert cinnamon, vanilla, salt, and lemon juice totals into tablespoons and teaspoons
+
+Display peaches delivered
+Display number of pies possible
+Display leftover peaches
+Display remainder when dividing by 5
+Display all total ingredient amounts in converted units
+
+END
